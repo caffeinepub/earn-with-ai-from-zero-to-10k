@@ -1,0 +1,16 @@
+{
+  "frontend/src/App.tsx": "Main application component that composes the six landing page sections (LandingHero, ProductPreview, WhyChooseGuide, Reviews, FinalCta, Footer) for the AI ebook sales page.",
+  "frontend/src/components/Hero.tsx": "Hero section component featuring the business name, tagline, background image, and prominent WhatsApp order button with smooth animations.",
+  "frontend/src/components/Services.tsx": "Services section displaying four service cards (Custom Cakes, Cupcakes, Party Orders, Delivery) with icons from lucide-react (Cake, Cookie, PartyPopper, Truck) and descriptions in a responsive grid.",
+  "frontend/src/components/Gallery.tsx": "Gallery section showcasing six bakery product images in a responsive grid with hover effects and modal dialog for enlarged views.",
+  "frontend/src/components/Contact.tsx": "Contact section displaying location, phone number, and WhatsApp order button in an organized card layout with interactive elements.",
+  "frontend/src/components/Footer.tsx": "Footer displaying the disclaimer text and WhatsApp contact number for the AI ebook landing page.",
+  "frontend/src/index.css": "Global styles with tech-style blue/green/white OKLCH color palette for both light and dark modes, optimized for a modern, professional tech aesthetic.",
+  "frontend/src/hooks/useQueries.ts": "Minimal placeholder file as the static website doesn't require backend data fetching.",
+  "frontend/src/lib/whatsapp.ts": "Exports the canonical WhatsApp click link constant used by all CTA buttons across the landing page.",
+  "frontend/src/components/LandingHero.tsx": "Hero section featuring the ebook cover image, main headline \"Earn Your First ₹10,000 with the Help of AI\", subheading with bullet points, and WhatsApp CTA button over a tech-style background.",
+  "frontend/src/components/ProductPreview.tsx": "Product preview section displaying the ebook image, price \"₹199 Only\", description, and \"Buy Now on WhatsApp\" CTA in a card layout.",
+  "frontend/src/components/WhyChooseGuide.tsx": "\"Why Choose This Guide?\" section listing five benefits with checkmark icons in a clean, mobile-friendly layout.",
+  "frontend/src/components/Reviews.tsx": "Social proof section displaying exactly three customer reviews with star icons in a responsive card grid.",
+  "frontend/src/components/FinalCta.tsx": "Final call-to-action section with bold \"Start Your AI Journey Today\" headline, price display, and prominent WhatsApp contact button."
+}

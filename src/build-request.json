@@ -1,0 +1,216 @@
+{
+  "kind": "build_request",
+  "title": "Replace Cake King site with single-page AI ebook sales landing page (WhatsApp CTA)",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Replace the current single-page Cake King layout with a single-page sales landing page for the digital PDF ebook “Earn with AI from Zero to 10k” (price: ₹199), targeting beginners/students/side-income seekers in India, using the exact section order and headings specified by the user (Hero, Product Preview, Why Choose This Guide, Social Proof/Reviews, Final CTA, Footer).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Create a single-page sales website for a digital ebook.",
+          "WEBSITE STRUCTURE (VERY IMPORTANT)",
+          "1. HERO SECTION (TOP) ... 6. FOOTER"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The homepage renders exactly 6 sections in the order specified: Hero, Product Preview, Why Choose This Guide, Social Proof/Reviews, Final CTA, Footer",
+        "All user-facing text is in English and matches the user-provided headings/subheadings/reviews/disclaimer verbatim (except where the user left wording open-ended)"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement the Hero section with: (a) a large, professional ebook cover image; (b) main heading “Earn Your First ₹10,000 with the Help of AI”; (c) subheading “Beginner-friendly • No Coding • Real Methods”; (d) a highlighted CTA button labeled “Contact on WhatsApp to Buy” that opens the provided WhatsApp click link in a new tab/window.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Show a large professional ebook cover image",
+          "Main Heading (bold, big): Earn Your First ₹10,000 with the Help of AI",
+          "Subheading: Beginner-friendly • No Coding • Real Methods",
+          "Call-to-Action Button (highlighted): Contact on WhatsApp to Buy (Button should open the WhatsApp link given above)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero CTA button opens exactly: https://wa.me/919279282274?text=Hi%20I%20want%20to%20buy%20the%20AI%20ebook",
+        "The ebook cover is visually prominent on mobile and desktop (no tiny thumbnail presentation)"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement the Product Preview section with: (a) ebook image shown again at a smaller size; (b) price displayed clearly as “₹199 Only”; (c) one-line description “Learn simple, practical AI methods to start earning online from zero.”; (d) a CTA button labeled “Buy Now on WhatsApp” linking to the same WhatsApp click link.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "2. PRODUCT PREVIEW SECTION",
+          "Show price clearly: ₹199 Only",
+          "One-line description: Learn simple, practical AI methods to start earning online from zero.",
+          "CTA button again: Buy Now on WhatsApp"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The Product Preview section shows the price string exactly: “₹199 Only”",
+        "The Product Preview CTA opens exactly the provided WhatsApp link"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement the “Why Choose This Guide?” section with the exact title and bullet points provided by the user.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "3. WHY CHOOSE THIS GUIDE",
+          "Create a section titled: Why Choose This Guide?",
+          "Add bullet points like: Step-by-step AI earning methods for beginners ... Instant PDF delivery via WhatsApp"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The section heading is exactly: “Why Choose This Guide?”",
+        "All five bullets are present and readable on mobile without overcrowding"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Implement the Social Proof / Reviews section containing exactly 3 short reviews using the exact text provided by the user (including the star symbol).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "4. SOCIAL PROOF / REVIEWS",
+          "⭐ “Simple guide, very easy to understand.”",
+          "⭐ “Perfect for beginners who want to start with AI.”",
+          "⭐ “Worth more than ₹199.”"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Exactly three reviews are displayed",
+        "The review strings match the user-provided text verbatim"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Implement the Final CTA section with: (a) big bold text “Start Your AI Journey Today”; (b) subtext “Limited price: ₹199”; (c) CTA button labeled “Contact on WhatsApp Now” linking to the provided WhatsApp click link.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "5. FINAL CTA SECTION",
+          "Big bold text: Start Your AI Journey Today",
+          "Subtext: Limited price: ₹199",
+          "Button: Contact on WhatsApp Now"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Final CTA button opens exactly the provided WhatsApp link",
+        "Final CTA section is visually distinct from prior sections and clearly acts as the last conversion push"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Replace the current Footer content with: (a) disclaimer text “Results depend on effort and consistency. This is a beginner-friendly guide, not a get-rich-quick scheme.”; (b) WhatsApp number displayed again as “+91 9279282274”.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "6. FOOTER",
+          "Disclaimer text: Results depend on effort and consistency. This is a beginner-friendly guide, not a get-rich-quick scheme.",
+          "Show WhatsApp number again: +91 9279282274"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer shows the disclaimer sentence verbatim",
+        "Footer shows WhatsApp number verbatim: “+91 9279282274”"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Ensure all WhatsApp CTAs throughout the page use the exact same WhatsApp click link provided by the user, and remove/replace any existing Cake King WhatsApp message text so no CTA opens the old bakery message.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "WhatsApp Click Link: https://wa.me/919279282274?text=Hi%20I%20want%20to%20buy%20the%20AI%20ebook"
+        ]
+      },
+      "acceptanceCriteria": [
+        "No button/link in the UI opens a WhatsApp URL containing “Hello%20Cake%20King”",
+        "All WhatsApp CTAs open exactly: https://wa.me/919279282274?text=Hi%20I%20want%20to%20buy%20the%20AI%20ebook"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Update the site styling to a clean, modern, professional “tech-style” look using a blue/green/white palette, readable typography, clear spacing, and mobile-first responsive layout optimized for conversions (prominent CTA buttons, clear section separation).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Clean, modern, professional look",
+          "Tech-style colors (blue, green, white)",
+          "Mobile-friendly layout",
+          "Clear spacing, readable fonts",
+          "Focus on conversions and WhatsApp contact"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Primary/CTA styling uses a consistent blue/green/white theme across all sections",
+        "All sections render cleanly on small screens without horizontal scrolling",
+        "Typography is legible (no overly light text on light backgrounds and no cramped line heights)"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Add the required generated images as static assets under frontend/public/assets/generated and render them in the page (ebook cover at minimum; any additional required images per imageRequirements). Do not serve these images from the backend.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Show a large professional ebook cover image",
+          "Display ebook image again (smaller)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The ebook cover image loads from /assets/generated/… and is used in both Hero and Product Preview",
+        "No backend endpoints are added/used to fetch images"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files under frontend/immutablePaths (e.g., frontend/src/hooks/useInternetIdentity.ts(x), frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui). Compose with existing UI components instead.",
+    "Keep backend as-is (single-actor Motoko). No backend changes are required for a static WhatsApp-CTA landing page."
+  ],
+  "nonGoals": [
+    "Implementing payment processing, automated PDF delivery, or WhatsApp API automation (delivery is manual via WhatsApp after payment).",
+    "Exporting a Wix-specific project format; the deliverable is the React/Tailwind single-page app matching the requested structure and copy."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Professional 3D-style ebook cover design with a clean AI/tech theme in blue/green/white (ebook-cover.dim_1600x2400.png)",
+      "Abstract tech gradient background with subtle geometric/AI motifs in blue/green/white (hero-tech-bg.dim_1920x1080.jpg)"
+    ],
+    "edits": []
+  }
+}

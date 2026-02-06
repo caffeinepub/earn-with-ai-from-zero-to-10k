@@ -1,0 +1,282 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Project is now a single-page, mobile-friendly sales landing page for a digital PDF ebook sold via WhatsApp: “Earn with AI from Zero to 10k” (₹199), targeting beginners/students/side-income seekers in India. Page focuses on conversion copywriting and repeated WhatsApp CTAs, includes product preview, benefits bullets, social proof/reviews, final CTA, and footer disclaimer; intended to be ready-to-publish on Wix or similar website builders.",
+  "existing_features": [
+    {
+      "id": "IF-1",
+      "title": "Single-page Cake King marketing site layout",
+      "synonyms": [
+        "Landing page",
+        "One-page website"
+      ],
+      "description": "Composes Hero, Services, Gallery, Contact, and Footer into a single scrolling page (App.tsx).",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-2",
+      "title": "Hero section with WhatsApp ordering CTA",
+      "synonyms": [
+        "Hero banner",
+        "Primary CTA"
+      ],
+      "description": "Full-screen hero with background image overlay, business name/tagline, and a button that opens a prefilled WhatsApp chat to place an order.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-3",
+      "title": "Services section with responsive service cards",
+      "synonyms": [
+        "Offerings",
+        "What we do"
+      ],
+      "description": "Displays four service offerings (Custom Cakes, Cupcakes, Party Orders, Delivery) using icon-backed cards in a responsive grid.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-4",
+      "title": "Image gallery grid with modal enlargement",
+      "synonyms": [
+        "Creations gallery",
+        "Lightbox"
+      ],
+      "description": "Shows a 6-image gallery with hover overlays and a dialog modal to view images larger (Dialog + AspectRatio).",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-5",
+      "title": "Contact section with phone and WhatsApp actions",
+      "synonyms": [
+        "Get in touch",
+        "Contact details"
+      ],
+      "description": "Presents location and phone number; includes click-to-call via `tel:` and an 'Order via WhatsApp' button that opens a prefilled WhatsApp link.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-6",
+      "title": "Footer with attribution and business info",
+      "synonyms": [
+        "Site footer"
+      ],
+      "description": "Footer includes copyright, caffeine.ai attribution link, and bakery location/tagline.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-7",
+      "title": "Tailwind-based theming with CSS variables and dark mode",
+      "synonyms": [
+        "Design system tokens",
+        "OKLCH palette"
+      ],
+      "description": "Configures Tailwind with CSS-variable color tokens (including chart/sidebar tokens), container sizing, radius tokens, and dark mode support; includes animate/typography/container-query plugins.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-8",
+      "title": "Internet Identity authentication context provider",
+      "synonyms": [
+        "II login",
+        "Auth context"
+      ],
+      "description": "Provides a React Context for Internet Identity with login/logout, identity persistence, delegation validation, and status flags (initializing/idle/logging-in/success/error).",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-9",
+      "title": "Identity-aware ICP actor creation hook",
+      "synonyms": [
+        "useActor",
+        "Backend actor hook"
+      ],
+      "description": "Creates an anonymous or authenticated backend actor via `createActorWithConfig`, keyed by principal in TanStack Query, and invalidates/refetches dependent queries when identity changes.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-10",
+      "title": "Backend authorized principal registry and gateway sync",
+      "synonyms": [
+        "Authorization list",
+        "Gateway principals"
+      ],
+      "description": "Motoko module maintains an in-memory list of authorized principals and can refresh it by querying a cashier canister for `storage_gateway_principal_list_v1`. Provides `isAuthorized` checks.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-11",
+      "title": "Backend cycles refill/top-up to cashier",
+      "synonyms": [
+        "Cycles management",
+        "Top up"
+      ],
+      "description": "Calculates available cycles (leaving a reserved amount) and sends cycles to a cashier canister via `account_top_up_v1`, optionally capped by a proposed amount.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-12",
+      "title": "Backend blob lifecycle administration endpoints (liveness, dead-blob pruning, GC trigger)",
+      "synonyms": [
+        "Blob GC",
+        "Storage maintenance API"
+      ],
+      "description": "Exposes methods to check if a blob is live, retrieve up to 10,000 dead blobs (authorized callers only), confirm deletion (authorized callers only), and force GC; also returns a simple upload certificate response.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-single-page-cake-king-layout-with-a-single-page-sales-landing-page-for-the-digital-pdf-ebook-earn-with-ai-from-zero-to-10k-price-199-targeting-beginners-students-side-income-seekers-in-india-using-the-exact-section-order-and-headings-specified-by-the-user-hero-product-preview-why-choose-this-guide-social-proof-reviews-final-cta-footer",
+      "title": "Replace the current single-page Cake King layout with a single-page sales landing page for the digital PDF ebook “Earn with AI from Zero to 10k” (price: ₹199), targeting beginners/students/side-income seekers in India, using the exact section order and headings specified by the user (Hero, Product Preview, Why Choose This Guide, Social Proof/Reviews, Final CTA, Footer).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-hero-section-with-a-a-large-professional-ebook-cover-image-b-main-heading-earn-your-first-10-000-with-the-help-of-ai-c-subheading-beginner-friendly-no-coding-real-methods-d-a-highlighted-cta-button-labeled-contact-on-whatsapp-to-buy-that-opens-the-provided-whatsapp-click-link-in-a-new-tab-window",
+      "title": "Implement the Hero section with: (a) a large, professional ebook cover image; (b) main heading “Earn Your First ₹10,000 with the Help of AI”; (c) subheading “Beginner-friendly • No Coding • Real Methods”; (d) a highlighted CTA button labeled “Contact on WhatsApp to Buy” that opens the provided WhatsApp click link in a new tab/window.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-product-preview-section-with-a-ebook-image-shown-again-at-a-smaller-size-b-price-displayed-clearly-as-199-only-c-one-line-description-learn-simple-practical-ai-methods-to-start-earning-online-from-zero-d-a-cta-button-labeled-buy-now-on-whatsapp-linking-to-the-same-whatsapp-click-link",
+      "title": "Implement the Product Preview section with: (a) ebook image shown again at a smaller size; (b) price displayed clearly as “₹199 Only”; (c) one-line description “Learn simple, practical AI methods to start earning online from zero.”; (d) a CTA button labeled “Buy Now on WhatsApp” linking to the same WhatsApp click link.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-why-choose-this-guide-section-with-the-exact-title-and-bullet-points-provided-by-the-user",
+      "title": "Implement the “Why Choose This Guide?” section with the exact title and bullet points provided by the user.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-social-proof-reviews-section-containing-exactly-3-short-reviews-using-the-exact-text-provided-by-the-user-including-the-star-symbol",
+      "title": "Implement the Social Proof / Reviews section containing exactly 3 short reviews using the exact text provided by the user (including the star symbol).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-final-cta-section-with-a-big-bold-text-start-your-ai-journey-today-b-subtext-limited-price-199-c-cta-button-labeled-contact-on-whatsapp-now-linking-to-the-provided-whatsapp-click-link",
+      "title": "Implement the Final CTA section with: (a) big bold text “Start Your AI Journey Today”; (b) subtext “Limited price: ₹199”; (c) CTA button labeled “Contact on WhatsApp Now” linking to the provided WhatsApp click link.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-footer-content-with-a-disclaimer-text-results-depend-on-effort-and-consistency-this-is-a-beginner-friendly-guide-not-a-get-rich-quick-scheme-b-whatsapp-number-displayed-again-as-91-9279282274",
+      "title": "Replace the current Footer content with: (a) disclaimer text “Results depend on effort and consistency. This is a beginner-friendly guide, not a get-rich-quick scheme.”; (b) WhatsApp number displayed again as “+91 9279282274”.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-all-whatsapp-ctas-throughout-the-page-use-the-exact-same-whatsapp-click-link-provided-by-the-user-and-remove-replace-any-existing-cake-king-whatsapp-message-text-so-no-cta-opens-the-old-bakery-message",
+      "title": "Ensure all WhatsApp CTAs throughout the page use the exact same WhatsApp click link provided by the user, and remove/replace any existing Cake King WhatsApp message text so no CTA opens the old bakery message.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-site-styling-to-a-clean-modern-professional-tech-style-look-using-a-blue-green-white-palette-readable-typography-clear-spacing-and-mobile-first-responsive-layout-optimized-for-conversions-prominent-cta-buttons-clear-section-separation",
+      "title": "Update the site styling to a clean, modern, professional “tech-style” look using a blue/green/white palette, readable typography, clear spacing, and mobile-first responsive layout optimized for conversions (prominent CTA buttons, clear section separation).",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-required-generated-images-as-static-assets-under-frontend-public-assets-generated-and-render-them-in-the-page-ebook-cover-at-minimum-any-additional-required-images-per-imagerequirements-do-not-serve-these-images-from-the-backend",
+      "title": "Add the required generated images as static assets under frontend/public/assets/generated and render them in the page (ebook cover at minimum; any additional required images per imageRequirements). Do not serve these images from the backend.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create ebook sales landing page with required sections (Hero w/ cover + headline/subhead + WhatsApp CTA, Product Preview w/ price + CTA, Why Choose bullet list, Reviews, Final CTA, Footer disclaimer + WhatsApp number)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Implement WhatsApp purchase flow: all CTA buttons link to provided wa.me URL and display WhatsApp number +91 9279282274",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Apply clean modern tech-style design (blue/green/white), professional typography, clear spacing, mobile-first responsive layout optimized for conversions",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "architecturalNotes": [
+    "Frontend is a React SPA composed of section components (Hero, Services, Gallery, Contact, Footer) assembled in App.tsx.",
+    "Styling uses Tailwind CSS with CSS-variable-driven OKLCH color tokens and dark mode via the 'class' strategy; tailwind plugins include typography, container-queries, and tailwindcss-animate.",
+    "UI primitives are imported from a local '@/components/ui/*' layer (likely shadcn/ui + Radix patterns), e.g., Card and Dialog.",
+    "Frontend includes an authentication layer using Internet Identity via @dfinity/auth-client, exposed through a React Context provider (InternetIdentityProvider) with derived status flags.",
+    "Actor creation is encapsulated in a React Query hook (useActor) that produces either an anonymous or identity-bound actor and invalidates/refetches non-actor queries on identity changes.",
+    "Backend is a Motoko canister that composes functionality via an `include MixinStorage();` mixin pattern (modular capability injection).",
+    "Backend storage authorization uses a mutable in-memory registry of authorized principals, refreshed by querying a 'cashier' canister whose principal is provided via an environment variable.",
+    "Backend interacts with IC system primitives (Prim.*) for storage blob liveness/dead blob enumeration/pruning and triggers explicit GC via a special __motoko_gc_trigger call."
+  ],
+  "knownIssues": [
+    "frontend contains two different CSS files listed: frontend/src/index.css (bakery-themed OKLCH palette) and frontend/index.css (generic palette). This duplication may cause confusion or incorrect styling depending on which file is actually imported/built (main.tsx imports './index.css' from src).",
+    "Gallery.tsx maintains `selectedImage` state but never uses it (the dialog uses `image.src` directly).",
+    "frontend/src/hooks/useQueries.ts is an empty placeholder; any expectation of data fetching is currently unimplemented by design.",
+    "Frontend is largely static but still includes React Query + Internet Identity + actor creation plumbing; currently no shown components actually use the actor or identity to call the backend.",
+    "Internet Identity provider URL is sourced from `process.env.II_URL`; missing/incorrect env config will break login flows.",
+    "Backend requires `CAFFFEINE_STORAGE_CASHIER_PRINCIPAL` env var; if unset, getCashierPrincipal traps and dependent calls fail.",
+    "Storage.refillCashier computes `Nat.sub(currentBalance, reservedCycles)` which can trap/underflow if currentBalance < reservedCycles; there is no guard.",
+    "Authorized principals registry in the backend is `transient` and not stable; it will reset on upgrades/redeploys until `_caffeineStorageUpdateGatewayPrincipals` is called again.",
+    "_caffeineStorageUpdateGatewayPrincipals is callable by anyone (no authorization check), potentially allowing untrusted callers to trigger repeated remote calls to the cashier canister (resource/DoS concern).",
+    "_caffeineStorageCreateCertificate returns a static {method='upload', blob_hash=...} response and does not validate blob hashes or caller authorization (may be incomplete/stub behavior)."
+  ],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Professional 3D-style ebook cover design with a clean AI/tech theme in blue/green/white (ebook-cover.dim_1600x2400.png)\n- Abstract tech gradient background with subtle geometric/AI motifs in blue/green/white (hero-tech-bg.dim_1920x1080.jpg)",
+  "generatedImages": [
+    {
+      "filename": "ebook-cover.dim_1600x2400.png",
+      "description": "Professional 3D-style ebook cover design with a clean AI/tech theme in blue/green/white",
+      "targetWidth": 1600,
+      "targetHeight": 2400
+    },
+    {
+      "filename": "hero-tech-bg.dim_1920x1080.jpg",
+      "description": "Abstract tech gradient background with subtle geometric/AI motifs in blue/green/white",
+      "targetWidth": 1920,
+      "targetHeight": 1080
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Earn with AI from Zero to 10k",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0,
+  "requiresBackendChanges": false,
+  "requiresFrontendChanges": true
+}

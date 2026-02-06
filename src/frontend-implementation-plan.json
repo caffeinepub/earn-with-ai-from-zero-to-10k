@@ -1,0 +1,273 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Single-page AI ebook sales landing page (WhatsApp CTA)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Replace the existing Cake King single-page layout with a 6-section single-page ebook sales landing page in the exact required order and headings.",
+      "acceptanceCriteria": [
+        "The homepage renders exactly 6 sections in the order specified: Hero, Product Preview, Why Choose This Guide, Social Proof/Reviews, Final CTA, Footer",
+        "All user-facing text is in English and matches the user-provided headings/subheadings/reviews/disclaimer verbatim (except where the user left wording open-ended)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Replace the current Cake King section composition with the required 6-section landing page composition and wire all new section components in the exact order (Hero, Product Preview, Why Choose This Guide, Social Proof/Reviews, Final CTA, Footer)."
+        },
+        {
+          "path": "frontend/src/components/LandingHero.tsx",
+          "operation": "create",
+          "description": "Create the landing page Hero section component matching the required heading/subheading/CTA and new tech-style visuals. Use shadcn-ui Button for the CTA; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/ProductPreview.tsx",
+          "operation": "create",
+          "description": "Create the Product Preview section component showing the ebook image, exact price string, description, and WhatsApp CTA. Use shadcn-ui Card/Button for layout and CTA; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/WhyChooseGuide.tsx",
+          "operation": "create",
+          "description": "Create the “Why Choose This Guide?” section component with the exact title and the five user-provided bullet points, formatted for mobile readability."
+        },
+        {
+          "path": "frontend/src/components/Reviews.tsx",
+          "operation": "create",
+          "description": "Create the Social Proof / Reviews section component that renders exactly three review strings verbatim (including the star symbol). Use shadcn-ui Card for clean review presentation; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/FinalCta.tsx",
+          "operation": "create",
+          "description": "Create the Final CTA section component with the required big headline, subtext, and WhatsApp CTA button. Use shadcn-ui Button for the CTA; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Replace the existing bakery footer content with the required disclaimer text and WhatsApp number display for the ebook landing page."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement the Hero section with prominent ebook cover, exact heading/subheading, and a WhatsApp CTA opening the provided link in a new tab/window.",
+      "acceptanceCriteria": [
+        "Hero CTA button opens exactly: https://wa.me/919279282274?text=Hi%20I%20want%20to%20buy%20the%20AI%20ebook",
+        "The ebook cover is visually prominent on mobile and desktop (no tiny thumbnail presentation)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/LandingHero.tsx",
+          "operation": "modify",
+          "description": "Implement the Hero UI: large professional ebook cover image, exact main heading “Earn Your First ₹10,000 with the Help of AI”, exact subheading “Beginner-friendly • No Coding • Real Methods”, and a highlighted CTA button labeled “Contact on WhatsApp to Buy” that opens the shared WhatsApp link in a new tab/window. Use shadcn-ui Button for the CTA; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/lib/whatsapp.ts",
+          "operation": "create",
+          "description": "Add a single exported constant for the canonical WhatsApp click link to be reused by all CTAs to ensure consistency across sections."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Implement the Product Preview section with ebook image (smaller), exact price string, description line, and WhatsApp CTA.",
+      "acceptanceCriteria": [
+        "The Product Preview section shows the price string exactly: “₹199 Only”",
+        "The Product Preview CTA opens exactly the provided WhatsApp link"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ProductPreview.tsx",
+          "operation": "modify",
+          "description": "Implement Product Preview content and layout: show ebook image again at smaller size, display price exactly “₹199 Only”, show description exactly “Learn simple, practical AI methods to start earning online from zero.”, and add a CTA button labeled “Buy Now on WhatsApp” opening the shared WhatsApp link. Use shadcn-ui Card/Button; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Implement the “Why Choose This Guide?” section with the exact title and the five user-provided bullet points.",
+      "acceptanceCriteria": [
+        "The section heading is exactly: “Why Choose This Guide?”",
+        "All five bullets are present and readable on mobile without overcrowding"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/WhyChooseGuide.tsx",
+          "operation": "modify",
+          "description": "Render the section heading exactly “Why Choose This Guide?” and include all five user-provided bullet points verbatim, using a mobile-first list layout with comfortable spacing and line-height."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Implement the Social Proof / Reviews section with exactly 3 short reviews matching the provided text verbatim.",
+      "acceptanceCriteria": [
+        "Exactly three reviews are displayed",
+        "The review strings match the user-provided text verbatim"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Reviews.tsx",
+          "operation": "modify",
+          "description": "Render exactly three reviews with the exact user-provided strings (including the star symbol), and ensure no additional reviews or testimonial UI is shown. Use shadcn-ui Card for each review; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Implement the Final CTA section with exact headline/subtext and WhatsApp CTA button linking to the provided WhatsApp click link.",
+      "acceptanceCriteria": [
+        "Final CTA button opens exactly the provided WhatsApp link",
+        "Final CTA section is visually distinct from prior sections and clearly acts as the last conversion push"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/FinalCta.tsx",
+          "operation": "modify",
+          "description": "Implement Final CTA content: big bold text “Start Your AI Journey Today”, subtext “Limited price: ₹199”, and CTA button labeled “Contact on WhatsApp Now” opening the shared WhatsApp link. Use shadcn-ui Button and distinct section styling; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Replace the footer content with the required disclaimer and WhatsApp number display.",
+      "acceptanceCriteria": [
+        "Footer shows the disclaimer sentence verbatim",
+        "Footer shows WhatsApp number verbatim: “+91 9279282274”"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Replace footer contents with: disclaimer text exactly “Results depend on effort and consistency. This is a beginner-friendly guide, not a get-rich-quick scheme.” and show WhatsApp number exactly “+91 9279282274”, removing all Cake King branding/attribution content."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Ensure all WhatsApp CTAs use the exact same WhatsApp click link and remove/replace any existing Cake King WhatsApp message text.",
+      "acceptanceCriteria": [
+        "No button/link in the UI opens a WhatsApp URL containing “Hello%20Cake%20King”",
+        "All WhatsApp CTAs open exactly: https://wa.me/919279282274?text=Hi%20I%20want%20to%20buy%20the%20AI%20ebook"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/lib/whatsapp.ts",
+          "operation": "modify",
+          "description": "Define/export the single canonical WhatsApp click link constant exactly as provided and ensure it is the only WhatsApp URL used by landing page CTAs."
+        },
+        {
+          "path": "frontend/src/components/LandingHero.tsx",
+          "operation": "modify",
+          "description": "Update the Hero CTA to use the shared canonical WhatsApp link constant and remove any legacy Cake King message/link usage."
+        },
+        {
+          "path": "frontend/src/components/ProductPreview.tsx",
+          "operation": "modify",
+          "description": "Update the Product Preview CTA to use the shared canonical WhatsApp link constant and ensure it opens in a new tab/window."
+        },
+        {
+          "path": "frontend/src/components/FinalCta.tsx",
+          "operation": "modify",
+          "description": "Update the Final CTA button to use the shared canonical WhatsApp link constant and ensure it opens in a new tab/window."
+        },
+        {
+          "path": "frontend/src/components/Hero.tsx",
+          "operation": "delete",
+          "description": "Remove the old Cake King Hero component that contains the legacy WhatsApp message/link with “Hello%20Cake%20King”."
+        },
+        {
+          "path": "frontend/src/components/Contact.tsx",
+          "operation": "delete",
+          "description": "Remove the old Cake King Contact component to eliminate legacy WhatsApp CTA text and avoid unused/orphaned bakery content."
+        },
+        {
+          "path": "frontend/src/components/Services.tsx",
+          "operation": "delete",
+          "description": "Remove the old Cake King Services component so the landing page only contains the required 6 sections and no bakery content."
+        },
+        {
+          "path": "frontend/src/components/Gallery.tsx",
+          "operation": "delete",
+          "description": "Remove the old Cake King Gallery component so the landing page only contains the required 6 sections and no bakery content."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Update styling to a clean, modern, professional tech-style look using a blue/green/white palette with mobile-first responsive conversion-focused layout.",
+      "acceptanceCriteria": [
+        "Primary/CTA styling uses a consistent blue/green/white theme across all sections",
+        "All sections render cleanly on small screens without horizontal scrolling",
+        "Typography is legible (no overly light text on light backgrounds and no cramped line heights)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Replace the warm bakery-themed CSS variables with a tech-style blue/green/white palette for light and dark modes, keeping typography readable and spacing comfortable across sections."
+        },
+        {
+          "path": "frontend/src/components/LandingHero.tsx",
+          "operation": "modify",
+          "description": "Apply conversion-focused tech styling: clear section separation, legible typography, responsive spacing, and a prominent CTA button aligned with the blue/green theme. Use shadcn-ui Button styling conventions; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/ProductPreview.tsx",
+          "operation": "modify",
+          "description": "Apply tech-style section styling and responsive layout so price/description/CTA are scannable and conversion-focused on mobile. Use shadcn-ui Card/Button styling conventions; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/WhyChooseGuide.tsx",
+          "operation": "modify",
+          "description": "Apply tech-style section styling and responsive list spacing so bullets remain readable on small screens without overcrowding."
+        },
+        {
+          "path": "frontend/src/components/Reviews.tsx",
+          "operation": "modify",
+          "description": "Apply tech-style section styling with clean review cards and clear separation from adjacent sections. Use shadcn-ui Card styling conventions; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/FinalCta.tsx",
+          "operation": "modify",
+          "description": "Make the Final CTA visually distinct (strong contrast, spacing, and CTA prominence) while maintaining the consistent blue/green/white theme. Use shadcn-ui Button styling conventions; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Update footer styling to match the tech-style theme while keeping disclaimer and WhatsApp number legible and accessible on mobile."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Add required generated images as static assets under frontend/public/assets/generated and render them in the landing page (ebook cover in Hero and Product Preview; hero tech background in Hero).",
+      "acceptanceCriteria": [
+        "The ebook cover image loads from /assets/generated/… and is used in both Hero and Product Preview",
+        "No backend endpoints are added/used to fetch images"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/ebook-cover.dim_1600x2400.png",
+          "operation": "create",
+          "description": "Add the required generated image asset at frontend/public/assets/generated/ebook-cover.dim_1600x2400.png for use as the ebook cover in the UI."
+        },
+        {
+          "path": "frontend/public/assets/generated/hero-tech-bg.dim_1920x1080.jpg",
+          "operation": "create",
+          "description": "Add the required generated image asset at frontend/public/assets/generated/hero-tech-bg.dim_1920x1080.jpg for use as the Hero background."
+        },
+        {
+          "path": "frontend/src/components/LandingHero.tsx",
+          "operation": "modify",
+          "description": "Render the Hero background using frontend/public/assets/generated/hero-tech-bg.dim_1920x1080.jpg and render the prominent ebook cover using frontend/public/assets/generated/ebook-cover.dim_1600x2400.png."
+        },
+        {
+          "path": "frontend/src/components/ProductPreview.tsx",
+          "operation": "modify",
+          "description": "Render the smaller ebook image using frontend/public/assets/generated/ebook-cover.dim_1600x2400.png and ensure it is clearly visible alongside price/description/CTA."
+        }
+      ]
+    }
+  ]
+}
